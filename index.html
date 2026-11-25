@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy anniv cayangg</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* =====================================================
+   HAPPY 2ND MONTHSARY
+   PIN CARD SAJA + PAGE TRANSPARAN
+===================================================== */
+
+:root {
+  --pink: #f8c9d9;
+  --pink-dark: #c87599;
+  --pink-light: #fff7fb;
+  --text: #704b5d;
+  --border: #f3c3d5;
+}
+
+/* ================= RESET ================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f6d9e5;
+  font-family: 'Fredoka', sans-serif;
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ================= BACKGROUND ================= */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  background:
+    linear-gradient(
+      rgba(255, 239, 248, .72),
+      rgba(255, 239, 248, .72)
+    ),
+    url("background.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ================= CONTAINER ================= */
+
+/* TIDAK ADA CARD DI SINI */
+.phone {
+  width: 100%;
+  max-width: 360px;
+  min-height: 500px;
+
+  background: transparent;
+
+  border: none;
+  border-radius: 0;
+
+  overflow: hidden;
+  position: relative;
+
+  box-shadow: none;
+}
+
+/* ================= HALAMAN ================= */
+
+.page {
+  display: none;
+
+  width: 100%;
+  min-height: 500px;
+
+  padding: 14px 18px;
+
+  text-align: center;
+  position: relative;
+
+  animation: fade .45s ease;
+}
+
+.page.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+/* ================= PAGE 1 = CARD PIN ================= */
+
+/* HANYA PAGE PIN YANG ADA CARD */
+#page1 {
+  background: rgba(255, 247, 251, .94);
+
+  border: 3px solid var(--border);
+  border-radius: 28px;
+
+  height: 500px;
+  min-height: 500px;
+
+  box-shadow:
+    0 15px 45px rgba(170, 90, 120, .15);
+}
+
+/* ================= PAGE SELANJUTNYA ================= */
+
+/* PAGE 2-8 TRANSPARAN */
+#page2,
+#page3,
+#page4,
+#page5,
+#page6,
+#page7,
+#page8 {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* ================= ANIMASI PAGE ================= */
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= HIASAN BACKGROUND ================= */
+
+.bg {
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+  overflow: hidden;
+
+  opacity: .7;
+}
+
+.bg span {
+  position: absolute;
+
+  color: #f4c5d8;
+  font-size: 24px;
+
+  animation: float 5s ease-in-out infinite;
+}
+
+.bg span:nth-child(1) {
+  top: 8%;
+  left: 8%;
+}
+
+.bg span:nth-child(2) {
+  top: 20%;
+  right: 8%;
+  animation-delay: 1s;
+}
+
+.bg span:nth-child(3) {
+  top: 45%;
+  left: 5%;
+  animation-delay: 2s;
+}
+
+.bg span:nth-child(4) {
+  top: 60%;
+  right: 5%;
+  animation-delay: .5s;
+}
+
+.bg span:nth-child(5) {
+  bottom: 10%;
+  left: 12%;
+  animation-delay: 1.5s;
+}
+
+.bg span:nth-child(6) {
+  bottom: 18%;
+  right: 15%;
+  animation-delay: 2.5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(5deg);
+  }
+}
+
+/* ================= TEKS ================= */
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 26px;
+  line-height: 1.15;
+  color: var(--pink-dark);
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.small {
+  font-size: 13px;
+  opacity: .75;
+}
+
+/* ================= FOTO ================= */
+
+.photo {
+  width: 100%;
+  height: 125px;
+
+  object-fit: cover;
+
+  border-radius: 18px;
+  border: 4px solid white;
+
+  box-shadow:
+    0 8px 20px rgba(190, 110, 140, .12);
+
+  margin-bottom: 10px;
+}
+
+.character {
+  width: 150px;
+  height: 150px;
+
+  object-fit: contain;
+
+  margin: 10px auto;
+
+  display: block;
+}
+
+/* ================= BUTTON ================= */
+
+.btn {
+  background: #f8c5d8;
+  color: #9b5d79;
+
+  border: 2px solid #efb3ca;
+  border-radius: 30px;
+
+  padding: 10px 20px;
+
+  font-family: 'Fredoka', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+
+  box-shadow:
+    0 5px 12px rgba(190, 110, 140, .1);
+
+  transition: .2s;
+  margin: 4px;
+
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: #f4b7ce;
+}
+
+.btn:active {
+  transform: scale(.96);
+}
+
+.btn.white {
+  background: white;
+  border-color: #f3d1df;
+}
+
+/* ================= PASSWORD ================= */
+
+.password-title {
+  margin-top: 2px;
+}
+
+.password-title h1 {
+  font-size: 23px;
+  line-height: 1.15;
+  margin-bottom: 6px;
+}
+
+.password-title p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+/* BULATAN PASSWORD */
+
+.pass-display {
+  font-size: 19px;
+  letter-spacing: 6px;
+
+  color: #d07c9e;
+
+  height: 25px;
+
+  margin: 4px 0 12px;
+}
+
+/* KEYPAD */
+
+.keypad {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 8px;
+
+  max-width: 300px;
+  margin: auto;
+}
+
+.key {
+  height: 43px;
+
+  border-radius: 13px;
+
+  background: #fff;
+  border: 2px solid #f4d5e1;
+
+  color: #9a637b;
+
+  font-family: 'Fredoka', sans-serif;
+  font-size: 18px;
+
+  box-shadow:
+    0 4px 8px rgba(180, 100, 130, .05);
+
+  transition: .15s;
+
+  cursor: pointer;
+}
+
+.key:hover {
+  background: #fff0f6;
+}
+
+.key:active {
+  transform: scale(.94);
+  background: #f8d4e2;
+}
+
+/* HINT */
+
+.hint {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #bd7c99;
+}
+
+/* ================= OPTIONS ================= */
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  gap: 6px;
+
+  margin-top: 14px;
+}
+
+.options .btn {
+  font-size: 13px;
+  padding: 10px 14px;
+}
+
+/* ================= MESSAGE ================= */
+
+.message-box {
+  background: rgba(255, 255, 255, .72);
+
+  border: 2px solid #f4d2df;
+  border-radius: 22px;
+
+  padding: 18px 16px;
+
+  text-align: left;
+
+  box-shadow:
+    0 8px 20px rgba(180, 100, 130, .06);
+
+  margin-top: 12px;
+
+  max-height: 310px;
+  overflow-y: auto;
+}
+
+.message-box p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.message-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* ================= LOVE BERTERBANGAN ================= */
+
+.heart {
+  position: fixed;
+
+  bottom: -40px;
+  left: 0;
+
+  font-size: 20px;
+
+  pointer-events: none;
+  z-index: 999;
+
+  animation: loveFloat 5s ease-in forwards;
+
+  filter:
+    drop-shadow(0 3px 5px rgba(220, 120, 160, .15));
+}
+
+@keyframes loveFloat {
+
+  0% {
+    transform:
+      translateY(0)
+      translateX(0)
+      rotate(0deg)
+      scale(.5);
+
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+
+    transform:
+      translateY(-80px)
+      translateX(5px)
+      rotate(-10deg)
+      scale(1);
+  }
+
+  40% {
+    transform:
+      translateY(-280px)
+      translateX(-25px)
+      rotate(15deg)
+      scale(1.1);
+  }
+
+  70% {
+    transform:
+      translateY(-500px)
+      translateX(25px)
+      rotate(-15deg)
+      scale(.9);
+
+    opacity: .9;
+  }
+
+  100% {
+    transform:
+      translateY(-850px)
+      translateX(-10px)
+      rotate(25deg)
+      scale(.7);
+
+    opacity: 0;
+  }
+}
+
+/* ================= MUSIK ================= */
+
+.music-btn {
+  position: fixed;
+
+  bottom: 25px;
+  right: 25px;
+
+  width: 55px;
+  height: 55px;
+
+  border-radius: 50%;
+
+  background: #e89bb9;
+  color: white;
+
+  font-size: 23px;
+
+  z-index: 99;
+
+  box-shadow:
+    0 5px 20px rgba(200, 100, 140, .25);
+
+  display: none;
+  cursor: pointer;
+}
+
+.music-btn.show {
+  display: block;
+}
+
+.music-btn.playing {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 500px) {
+
+  .app {
+    padding: 0;
+  }
+
+  .phone {
+    width: 100%;
+    max-width: 360px;
+    min-height: 500px;
+  }
+
+  /* CARD PIN TETAP PENDEK */
+  #page1 {
+    height: 500px;
+    min-height: 500px;
+    border-radius: 28px;
+  }
+
+  /* PAGE LAIN TANPA CARD */
+  #page2,
+  #page3,
+  #page4,
+  #page5,
+  #page6,
+  #page7,
+  #page8 {
+    min-height: 500px;
+    padding: 14px 18px;
+  }
+
+  .photo {
+    height: 125px;
+  }
+
+  h1 {
+    font-size: 23px;
+  }
+
+  .message-box {
+    padding: 18px 16px;
+  }
+
+}
+
+/* ================= HP KECIL ================= */
+
+@media (max-width: 380px) {
+
+  .phone {
+    max-width: 340px;
+  }
+
+  #page1 {
+    height: 500px;
+    min-height: 500px;
+  }
+
+  .page {
+    padding: 12px 14px;
+  }
+
+  .photo {
+    height: 115px;
+  }
+
+  .keypad {
+    gap: 7px;
+  }
+
+  .key {
+    height: 40px;
+    font-size: 17px;
+  }
+
+}
+
+#page1 .photo {
+  display: block;
+  width: 85px;
+  height: 85px;
+  object-fit: contain;
+  margin: 10px auto 12px;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="app">
+<div class="phone">
+
+<!-- BACKGROUND HIASAN -->
+<div class="bg">
+  <span>♡</span>
+  <span>✦</span>
+  <span>♡</span>
+  <span>✧</span>
+  <span>♡</span>
+  <span>✦</span>
+</div>
+
+<!-- ================= PAGE 1 ================= -->
+<!-- SATU-SATUNYA PAGE YANG PAKAI CARD -->
+
+<section class="page active" id="page1">
+<div class="content">
+
+  <div class="password-title">
+    <h1>ayoooo cayangg coba tebakk <br>paswordnyaa!!💗💗 </h1>
+    <p>kalo salah araaa ngambekk :v</p>
+  </div>
+
+  <img src="icon6.webp" class="photo" alt="Foto kita">
+
+  <div class="pass-display" id="passDisplay">♡♡♡♡</div>
+
+  <div class="keypad">
+    <button class="key" onclick="pressKey('1')">1</button>
+    <button class="key" onclick="pressKey('2')">2</button>
+    <button class="key" onclick="pressKey('3')">3</button>
+    <button class="key" onclick="pressKey('4')">4</button>
+    <button class="key" onclick="pressKey('5')">5</button>
+    <button class="key" onclick="pressKey('6')">6</button>
+    <button class="key" onclick="pressKey('7')">7</button>
+    <button class="key" onclick="pressKey('8')">8</button>
+    <button class="key" onclick="pressKey('9')">9</button>
+    <button class="key" onclick="pressKey('0')" style="grid-column:2">0</button>
+  </div>
+
+  <p class="hint">hint : our date xixi! 💗</p>
+
+</div>
+</section>
+
+<!-- ================= PAGE 2 ================= -->
+
+<section class="page" id="page2">
+<div class="content">
+
+  <img src="icon1.webp" class="character" alt="Karakter lucu">
+
+  <h1 style="color:#333;">cieee udahh bisaa<br>tebakk! 💗</h1>
+
+  <button class="btn" onclick="nextPage(3); startMusic();">
+    tap disinii &lt;3
+  </button>
+
+</div>
+</section>
+
+<!-- ================= PAGE 3 ================= -->
+
+<section class="page" id="page3">
+<div class="content">
+
+  <img src="icon2.webp" class="character" alt="Karakter lucu">
+
+  <h2>allooow cayanggg udah siap<br>belum nihh sama kadonya??</h2>
+
+  <div class="options">
+    <button class="btn" onclick="nextPage(4)">
+yesss, can't wait! ><
+    </button>
+
+    <button class="btn white" onclick="tease()">
+     noo, not yett
+    </button>
+  </div>
+
+  <p class="small" id="teaseText"></p>
+
+</div>
+</section>
+
+<!-- ================= PAGE 4 ================= -->
+
+<section class="page" id="page4">
+<div class="content">
+
+
+  <img src="icon3.webp" class="character" alt="Karakter lucu">
+
+  <h2>yeayyy maacii udahh jawab!!!</h2>
+
+  <p>one last thing, i made something<br>special for you, cayang. are you ready? ♡</p>
+
+  <button class="btn" onclick="nextPage(5)">
+    open it, cayanggg ♡
+  </button>
+
+</div>
+</section>
+
+<!-- ================= PAGE 5 ================= -->
+
+<section class="page" id="page5">
+<div class="content">
+
+  
+  <img src="icon4.webp" class="character" alt="Karakter lucu">
+
+  <h1>happy 1st anniversary, my love! ❤️</h1>
+
+  <p>one year with you, a thousand memories, and countless reasons to love you.</p>
+
+  <button class="btn" onclick="nextPage(6)">
+  next surprise ❤️
+  </button>
+
+</div>
+</section>
+
+<!-- ================= PAGE 6 ================= -->
+
+<section class="page" id="page6">
+<div class="content">
+
+  <h1 style="font-family:'Fredoka'; color:#c87599;">
+   Happy 1st<br>Anniversary!
+  </h1>
+
+  <p style="font-size:16px;">💗 tap play music &lt;3</p>
+
+  <button class="btn" onclick="startMusic();">
+    ♪ ♡ ✦
+  </button>
+
+  <div class="message-box">
+
+   <p><b>Happy 1st Anniversary, my love! 💗</b></p>
+
+<p>
+  sometimes i still can't believe we've made it to one whole year.
+  rasanya baru kemarin kita memulai semuanya, dari dua orang yang
+  awalnya saling mengenal, mulai berbagi cerita, saling memahami,
+  sampai akhirnya bisa menjadi bagian penting dalam kehidupan satu
+  sama lain. nggak terasa, ternyata kita sudah sejauh ini melewati
+  banyak hal bersama.
+</p>
+
+<p>
+  selama satu tahun ini, banyak banget hal yang sudah kita lewati.
+  ada tawa, kebahagiaan, cerita random, candaan kecil, momen
+  sederhana yang selalu berhasil bikin senyum, bahkan mungkin ada
+  perbedaan pendapat, kesalahpahaman, dan hari-hari yang nggak
+  selalu mudah. tapi dari semua itu, aku belajar bahwa hubungan
+  bukan cuma tentang bagaimana kita menikmati hal-hal indah,
+  tetapi juga tentang bagaimana kita saling memahami, mengalah,
+  memaafkan, dan tetap memilih untuk bertahan ketika keadaan
+  sedang nggak baik-baik saja.
+</p>
+
+<p>
+  terima kasih sudah hadir dalam hidup aku. terima kasih untuk setiap
+  perhatian kecil, waktu yang kamu luangkan, cerita yang kamu bagikan,
+  kesabaran, pengertian, dan semua usaha yang mungkin terkadang
+  nggak selalu aku ungkapkan dengan kata-kata. terima kasih juga
+  karena sudah menjadi seseorang yang bisa aku ajak berbagi cerita,
+  mulai dari hal-hal penting sampai hal random yang sebenarnya
+  nggak terlalu penting. mungkin hal-hal itu terlihat sederhana,
+  tapi buat aku semuanya punya arti tersendiri.
+</p>
+
+<p>
+  di hari anniversary pertama kita ini, aku nggak berharap hubungan
+  kita akan selalu berjalan tanpa masalah. aku cuma berharap semoga
+  kita selalu punya alasan untuk saling memilih, punya kesabaran
+  untuk menghadapi setiap keadaan, dan punya kemauan untuk terus
+  memperbaiki apa pun yang mungkin kurang dari hubungan kita.
+  semoga jarak bukan menjadi alasan untuk menyerah, melainkan
+  menjadi salah satu hal yang membuat kita semakin menghargai
+  setiap pertemuan.
+</p>
+
+<p>
+  i hope we can create more beautiful memories together, celebrate
+  more anniversaries, share more laughter, and achieve many things
+  side by side. semoga suatu saat nanti kita nggak perlu lagi
+  menghitung jarak dan menunggu waktu untuk bertemu, karena kita
+  sudah bisa menghabiskan lebih banyak waktu bersama secara langsung.
+</p>
+
+<p>
+  once again, happy 1st anniversary, sayanggg!💗 thank you for being
+  part of my life and for making this one year so meaningful.
+  i'm so lucky to have you, and i hope you know how much you mean to me.
+</p>
+
+<p>
+  one year down, forever to go. i love you, today, tomorrow, and always.
+  ❤️❤️❤️🫶🏻
+</p>
+
+  </div>
+
+  <button class="btn" onclick="nextPage(7)">
+    next surprise 💗
+  </button>
+
+</div>
+</section>
+
+<!-- ================= PAGE 7 ================= -->
+
+<section class="page" id="page7">
+<div class="content">
+
+
+  <img src="icon5.webp" class="character" alt="Karakter lucu">
+
+  <h1>happy 1st anniversary,<br>cayangku! 💗</h1>
+
+  <p>
+    semoga kita selalu punya alasan buat tetap memilih satu sama lain, saling memahami, dan terus bertahan dalam keadaan apa pun.
+</p>
+
+  <p>
+makasih ya udah jadi bagian paling hangat di hidup aku. terima kasih sudah menemani perjalanan satu tahun ini dengan banyak cerita, tawa, dan kenangan yang nggak akan aku lupain.
+  
+  </p>
+
+  <p> one year with you, and still counting. ♡</p>
+
+  <button class="btn" onclick="nextPage(8)">
+    last one ♡
+  </button>
+
+</div>
+</section>
+
+<!-- ================= PAGE 8 ================= -->
+
+<section class="page" id="page8">
+<div class="content">
+
+
+  <img src="icon7.webp" class="character" alt="Karakter lucu">
+
+  <h1>i love you,<br>now and always. ❤️</h1>
+
+  <p>
+    jangan lupa bahagia hari ini yaa, sayang. semoga kamu selalu tahu betapa berharganya kamu buat aku.
+  </p>
+
+  <p style="font-size:18px;">
+   happy 1st anniversary, my love! 💗
+  </p>
+
+  <button class="btn" onclick="location.reload()">
+    replay ♡
+  </button>
+
+</div>
+</section>
+
+</div>
+</div>
+
+<!-- ================= MUSIK ================= -->
+
+<audio id="music" loop>
+  <source src="musik.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" id="musicBtn" onclick="toggleMusic()">♪</button>
+
+<script>
+let currentPage = 1;
+let password = "";
+
+/* GANTI PASSWORD DI SINI */
+const correctPassword = "2411 ";
+
+const music = document.getElementById("music");
+const musicBtn = document.getElementById("musicBtn");
+
+/* ================= PINDAH HALAMAN ================= */
+
+function nextPage(page) {
+  document.querySelectorAll(".page").forEach(p => {
+    p.classList.remove("active");
+  });
+
+  document.getElementById("page" + page).classList.add("active");
+  currentPage = page;
+
+  if (page > 1) {
+    musicBtn.classList.add("show");
+  }
+
+  window.scrollTo(0, 0);
+
+  if (page === 2 || page === 4 || page === 5 || page === 7 || page === 8) {
+    createHearts();
+  }
+}
+
+/* ================= PASSWORD ================= */
+
+function pressKey(num) {
+  if (password.length >= 4) return;
+
+  password += num;
+
+  document.getElementById("passDisplay").textContent =
+    "●".repeat(password.length) +
+    "♡".repeat(4 - password.length);
+
+  if (password.length === 4) {
+    setTimeout(() => {
+      if (password === correctPassword) {
+        nextPage(2);
+        createHearts();
+      } else {
+        alert("salahh ayang 😭 coba lagi yaa!");
+        password = "";
+        document.getElementById("passDisplay").textContent = "♡♡♡♡";
+      }
+    }, 300);
+  }
+}
+
+/* ================= MUSIK ================= */
+
+function startMusic() {
+  music.play().then(() => {
+    musicBtn.classList.add("playing");
+  }).catch(() => {
+    console.log("Autoplay diblokir browser.");
+  });
+}
+
+function toggleMusic() {
+  if (music.paused) {
+    startMusic();
+  } else {
+    music.pause();
+    musicBtn.classList.remove("playing");
+  }
+}
+
+/* Coba nyalakan musik otomatis saat halaman dibuka */
+window.addEventListener("load", () => {
+  music.volume = 0.7;
+  startMusic();
+});
+
+/* Jika autoplay diblokir, musik menyala setelah pengguna menyentuh halaman */
+document.addEventListener("click", () => {
+  if (music.paused) {
+    startMusic();
+  }
+}, { once: true });
+
+document.addEventListener("touchstart", () => {
+  if (music.paused) {
+    startMusic();
+  }
+}, { once: true });
+
+/* ================= TOMBOL ISENG ================= */
+
+function tease() {
+  document.getElementById("teaseText").textContent =
+    "ishh kamu mahh isengg teruss, haruss yangg excited!!";
+}
+
+/* ================= LOVE BERTERBANGAN ================= */
+
+function createHearts() {
+  const hearts = ["💗", "♥︎", "♡", "♡"];
+
+  for (let i = 0; i < 18; i++) {
+    setTimeout(() => {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+
+      heart.textContent =
+        hearts[Math.floor(Math.random() * hearts.length)];
+
+      heart.style.left = (Math.random() * 100) + "vw";
+
+      heart.style.fontSize =
+        (14 + Math.random() * 16) + "px";
+
+      heart.style.animationDuration =
+        (4 + Math.random() * 3) + "s";
+
+      heart.style.animationDelay =
+        (Math.random() * .5) + "s";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 8000);
+
+    }, i * 180);
+  }
+}
+
+/* LOVE MUNCUL LAGI SETIAP BEBERAPA DETIK */
+
+setInterval(() => {
+  if (currentPage > 1) {
+    createHearts();
+  }
+}, 9000);
+</script>
+
+</body>
+</html>
